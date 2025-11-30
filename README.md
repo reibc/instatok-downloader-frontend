@@ -2,7 +2,7 @@
 
 Front-end side for downloading videos from Instagram and TikTok.
 
-## 🎨 Tech Stack
+## Tech Stack
 
 - **React 19**
 - **TypeScript**
@@ -11,11 +11,14 @@ Front-end side for downloading videos from Instagram and TikTok.
 - **Axios**
 - **Lucide React**
 
-## ✨ Features
+## Features
 
 - Download Instagram Reels
 - Download TikTok videos
 - Responsive design (mobile-friendly)
+
+## Screenshots
+![Home Page](./public/image.png)
 
 ## Quick Start
 
