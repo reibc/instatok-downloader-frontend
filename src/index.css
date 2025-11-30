@@ -1,0 +1,104 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary-red: #ef4444;
+  --color-primary-blue: #3b82f6;
+  --color-accent-red: #dc2626;
+  --color-accent-blue: #2563eb;
+}
+
+@layer utilities {
+  .card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(51, 65, 85, 0.9) 100%);
+    border-radius: 1rem;
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.2),
+      0 8px 10px -6px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(100, 116, 139, 0.3);
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #ef4444 0%, #3b82f6 100%);
+    color: white;
+    font-weight: 600;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 0.75rem;
+    transition-property: all;
+    transition-duration: 200ms;
+    box-shadow:
+      0 10px 15px -3px rgba(239, 68, 68, 0.4),
+      0 4px 6px -4px rgba(59, 130, 246, 0.4);
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #dc2626 0%, #2563eb 100%);
+    box-shadow:
+      0 20px 25px -5px rgba(239, 68, 68, 0.5),
+      0 8px 10px -6px rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .input-field {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-width: 2px;
+    border-color: rgba(100, 116, 139, 0.4);
+    background-color: rgba(30, 41, 59, 0.6);
+    color: #f1f5f9;
+    border-radius: 0.75rem;
+    transition-property: all;
+    transition-duration: 200ms;
+  }
+
+  .input-field::placeholder {
+    color: #94a3b8;
+  }
+
+  .input-field:focus {
+    border-color: #ef4444;
+    background-color: rgba(30, 41, 59, 0.9);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3);
+  }
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    #1e293b 0%,
+    #0f172a 25%,
+    #1e1b4b 50%,
+    #1e293b 75%,
+    #0f172a 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  min-height: 100vh;
+  color: #f1f5f9;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
